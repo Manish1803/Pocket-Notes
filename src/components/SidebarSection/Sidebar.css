@@ -1,0 +1,234 @@
+.selected {
+  border: 1px solid #000;
+}
+
+.hidden {
+  display: none;
+}
+
+.sidebar {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #fff;
+  padding: 4rem 1rem;
+  /* position: relative; */
+}
+
+.sidebar .title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.sidebar .btn-new-group {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #16008b;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar .group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.group-list .group-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.group-item .cicon {
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: red;
+  color: #fff;
+}
+
+.group-item h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.group-item:hover {
+  background-color: #dcdcdc;
+}
+
+.gselected {
+  background-color: #dcdcdc;
+}
+
+.group-item:active {
+  background-color: #dcdcdc;
+}
+
+/* Overlay */
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+/* New Group Modal */
+
+.new-group-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.new-group-modal h2 {
+  font-size: 1.5rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.form input {
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.form div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.form div .circle {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.form .btn-create-group {
+  font-family: inherit;
+  font-size: 1.2rem;
+  grid-row: 3;
+  grid-column: 1/-1;
+  width: fit-content;
+  padding: 0.5rem 4rem;
+  border: 2px solid #16008b;
+  border-radius: 0.5rem;
+  background-color: #16008b;
+  color: #fff;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    max-width: 25rem;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    position: relative;
+  }
+
+  .sidebar .title {
+    font-size: 1.5rem;
+  }
+
+  .sidebar .group-list {
+    gap: 0.5rem;
+  }
+
+  .group-list .group-item {
+    column-gap: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .group-item .cicon {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.2rem;
+  }
+
+  .group-item h3 {
+    font-size: 1.1rem;
+  }
+
+  /* New Group Modal */
+
+  .new-group-modal {
+    gap: 2rem;
+    width: 35rem;
+    padding: 2rem;
+    padding-bottom: 1rem;
+  }
+
+  .form {
+    gap: 1.5rem;
+  }
+
+  .form label {
+    font-size: 1.2rem;
+  }
+
+  .form input {
+    border-radius: 3rem;
+    padding: 1rem;
+  }
+
+  .form div {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .form div .circle {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .form .btn-create-group {
+    font-size: 1.2rem;
+    grid-column: 2 /-1;
+    padding: 0.5rem 2.5rem;
+    margin: 0 0 0 auto;
+  }
+}

@@ -1,0 +1,36 @@
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #dae5f5;
+}
+
+.home img {
+  height: 15rem;
+  object-fit: cover;
+}
+
+.home h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.home .sub-text {
+  width: 45%;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #292929;
+}
+
+.encrypted {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 1.5rem;
+}
