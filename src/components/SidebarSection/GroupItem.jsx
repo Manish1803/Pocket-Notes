@@ -6,7 +6,6 @@ const GroupItem = ({ group }) => {
     useContext(Context);
 
   const handleGroupClick = () => {
-    console.log(group);
     setSelectedGroup(group);
     if (isMobile) {
       setHide(true);

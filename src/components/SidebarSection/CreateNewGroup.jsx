@@ -70,7 +70,12 @@ const CreateNewGroup = () => {
 
   return (
     <>
-      <button className="btn-new-group" onClick={toggleModal}>
+      <button
+        className="btn-new-group"
+        onClick={toggleModal}
+        title="New Group"
+        aria-label="New Group"
+      >
         <FaPlus color="#fff" size="2rem" />
       </button>
       {isModalOpen && (
