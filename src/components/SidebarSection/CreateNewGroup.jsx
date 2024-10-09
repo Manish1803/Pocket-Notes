@@ -48,7 +48,6 @@ const CreateNewGroup = () => {
         notes: [],
       };
 
-      console.log(newGroup);
       setGroups((prevGroups) =>
         Array.isArray(prevGroups) ? [...prevGroups, newGroup] : [newGroup]
       );

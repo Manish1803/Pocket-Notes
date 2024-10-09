@@ -24,7 +24,6 @@ const NotePanel = () => {
       date: datePart,
       time: timePart,
     };
-    console.log(newNote);
 
     setNotes((prevNotes) => [...prevNotes, newNote]);
 

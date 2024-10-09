@@ -17,10 +17,6 @@ const Sidebar = () => {
           ))}
         </ul>
       )}
-      {/* <ul className="group-list">
-        <GroupItem />
-        <GroupItem />
-      </ul> */}
       <CreateNewGroup isModalOpen={isModalOpen} toggleModal={toggleModal} />
     </aside>
   );
